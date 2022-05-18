@@ -27,9 +27,112 @@ $secondary: #5117EE;
 }
 
 body {
+  padding: 5em 0 10em 0;
   font-family: "Inter", sans-serif;
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
   color: $heading;
   background: $background;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+
+div.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#header {
+  margin-bottom: 5em;
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 1em;
+    height: 3.5em;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1.2em;
+    color: $copy;
+  }
+}
+
+#hero {
+  margin-bottom: 10em;
+  h1 {
+    margin-bottom: 2em;
+    font-size: 4em;
+    font-weight: 500;
+    a {
+      color: $primary;
+    }
+  }
+  nav {
+    a {
+      padding: 0 1em;
+      height: 2.5em;
+      display: inline-block;
+      line-height: 2.5em;
+      font-size: 1.5em;
+      font-weight: 500;
+      color: $heading;
+      text-decoration: none;
+      background: $accent;
+      border-radius: 2.5em;
+      span {
+        color: $secondary;
+      }
+      &:first-child {
+        margin-right: 1em;
+        border: 1px solid $accent;
+        background: $background;
+        box-shadow: 0 4px 12px rgb(115,113,113,.05);
+      }
+    }
+  }
+}
+
+#story {
+  p {
+    margin-bottom: 2.5em;
+    line-height: 1.5em;
+    font-size: 2em;
+    a {
+      font-weight: 600;
+      color: $heading;
+      text-decoration: none;
+      border-bottom: 1px solid $accent;
+    }
+  }
+  button {
+    padding: 0 1em 0 2.2em;
+    height: 2.5em;
+    display: inline-block;
+    line-height: 2.5em;
+    font-size: 1.5em;
+    color: $heading;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    background: $accent;
+    border-radius: 2.5em;
+    &:before {
+      width: .6em;
+      height: .6em;
+      display: block;
+      content: "";
+      position: absolute;
+      left: 1em;
+      top: 0.95em;
+      border-radius: 100%;
+      background: #FF8686;
+    }
+  }
 }

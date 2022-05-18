@@ -17,11 +17,110 @@
   font-style: normal;
 }
 body {
+  padding: 5em 0 10em 0;
   font-family: "Inter", sans-serif;
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
   color: #111111;
   background: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+
+div.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#header {
+  margin-bottom: 5em;
+  display: flex;
+  align-items: center;
+}
+#header img {
+  margin-right: 1em;
+  height: 3.5em;
+}
+#header h1 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+#header p {
+  font-size: 1.2em;
+  color: #C5C2C2;
+}
+
+#hero {
+  margin-bottom: 10em;
+}
+#hero h1 {
+  margin-bottom: 2em;
+  font-size: 4em;
+  font-weight: 500;
+}
+#hero h1 a {
+  color: #FBE30D;
+}
+#hero nav a {
+  padding: 0 1em;
+  height: 2.5em;
+  display: inline-block;
+  line-height: 2.5em;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: none;
+  background: #F5F5F5;
+  border-radius: 2.5em;
+}
+#hero nav a span {
+  color: #5117EE;
+}
+#hero nav a:first-child {
+  margin-right: 1em;
+  border: 1px solid #F5F5F5;
+  background: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(115, 113, 113, 0.05);
+}
+
+#story p {
+  margin-bottom: 2.5em;
+  line-height: 1.5em;
+  font-size: 2em;
+}
+#story p a {
+  font-weight: 600;
+  color: #111111;
+  text-decoration: none;
+  border-bottom: 1px solid #F5F5F5;
+}
+#story button {
+  padding: 0 1em 0 2.2em;
+  height: 2.5em;
+  display: inline-block;
+  line-height: 2.5em;
+  font-size: 1.5em;
+  color: #111111;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  background: #F5F5F5;
+  border-radius: 2.5em;
+}
+#story button:before {
+  width: 0.6em;
+  height: 0.6em;
+  display: block;
+  content: "";
+  position: absolute;
+  left: 1em;
+  top: 0.95em;
+  border-radius: 100%;
+  background: #FF8686;
 }
 
 /*# sourceMappingURL=main.css.map */
