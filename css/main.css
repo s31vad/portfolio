@@ -25,6 +25,11 @@ body {
   color: #111111;
   background: #FFFFFF;
 }
+@media only screen and (max-width: 481px) {
+  body {
+    padding: 3em 0;
+  }
+}
 
 h1, h2, h3, h4, h5, h6, p, a {
   margin: 0;
@@ -44,27 +49,54 @@ div.container {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 481px) {
+  #header {
+    margin-bottom: 3em;
+  }
+}
 #header img {
   margin-right: 1em;
   height: 3.5em;
 }
-#header h1 {
-  margin: 0;
+@media only screen and (max-width: 481px) {
+  #header img {
+    margin-right: 0.6em;
+    height: 2.5em;
+  }
+}
+#header h1, #header p {
   font-size: 1.2em;
+}
+@media only screen and (max-width: 481px) {
+  #header h1, #header p {
+    font-size: 1em;
+  }
+}
+#header h1 {
   font-weight: 600;
 }
 #header p {
-  font-size: 1.2em;
   color: #C5C2C2;
 }
 
 #hero {
   margin-bottom: 10em;
 }
+@media only screen and (max-width: 481px) {
+  #hero {
+    margin-bottom: 3em;
+  }
+}
 #hero h1 {
   margin-bottom: 2em;
   font-size: 4em;
   font-weight: 500;
+}
+@media only screen and (max-width: 481px) {
+  #hero h1 {
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
 }
 #hero h1 a {
   color: #FBE30D;
@@ -83,6 +115,11 @@ div.container {
   text-decoration: none;
   border-radius: 2.5em;
 }
+@media only screen and (max-width: 481px) {
+  #hero nav a {
+    font-size: 1em;
+  }
+}
 #hero nav a span {
   color: #5117EE;
 }
@@ -91,6 +128,11 @@ div.container {
   border: 1px solid #F5F5F5;
   background: #FFFFFF;
   box-shadow: 0 0.5em 1em rgba(115, 113, 113, 0.05);
+}
+@media only screen and (max-width: 481px) {
+  #hero nav a:first-child {
+    margin-bottom: 1em;
+  }
 }
 #hero nav a:first-child:hover {
   box-shadow: 0 -0.5em 1em rgba(115, 113, 113, 0.05);
@@ -106,6 +148,12 @@ div.container {
   margin-bottom: 2.5em;
   line-height: 1.5em;
   font-size: 2em;
+}
+@media only screen and (max-width: 481px) {
+  #story p {
+    margin-bottom: 1.5em;
+    font-size: 1.2em;
+  }
 }
 #story p a {
   font-weight: 600;
@@ -143,6 +191,11 @@ div.container {
   border: none;
   background: #F5F5F5;
   border-radius: 2.5em;
+}
+@media only screen and (max-width: 481px) {
+  #story button {
+    font-size: 1em;
+  }
 }
 #story button:before {
   width: 0.6em;
