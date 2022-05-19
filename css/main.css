@@ -30,6 +30,10 @@ h1, h2, h3, h4, h5, h6, p, a {
   margin: 0;
 }
 
+a {
+  transition: 0.2s;
+}
+
 div.container {
   margin: 0 auto;
   width: 90%;
@@ -65,6 +69,9 @@ div.container {
 #hero h1 a {
   color: #FBE30D;
 }
+#hero h1 a:hover {
+  color: #fdf186;
+}
 #hero nav a {
   padding: 0 1em;
   height: 2.5em;
@@ -74,7 +81,6 @@ div.container {
   font-weight: 500;
   color: #111111;
   text-decoration: none;
-  background: #F5F5F5;
   border-radius: 2.5em;
 }
 #hero nav a span {
@@ -84,7 +90,16 @@ div.container {
   margin-right: 1em;
   border: 1px solid #F5F5F5;
   background: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(115, 113, 113, 0.05);
+  box-shadow: 0 0.5em 1em rgba(115, 113, 113, 0.05);
+}
+#hero nav a:first-child:hover {
+  box-shadow: 0 -0.5em 1em rgba(115, 113, 113, 0.05);
+}
+#hero nav a:last-child {
+  background: #F5F5F5;
+}
+#hero nav a:last-child:hover {
+  background: #e9e9e9;
 }
 
 #story p {
@@ -97,6 +112,24 @@ div.container {
   color: #111111;
   text-decoration: none;
   border-bottom: 1px solid #F5F5F5;
+}
+#story p a:hover {
+  color: #5117EE;
+}
+#story p a.medium:hover {
+  color: #00AB6C;
+}
+#story p a.twitter:hover {
+  color: #1DA1F2;
+}
+#story p a.instagram:hover {
+  color: #C13584;
+}
+#story p a.dribbble:hover {
+  color: #EA4C89;
+}
+#story p a.apple:hover {
+  color: #FA57C1;
 }
 #story button {
   padding: 0 1em 0 2.2em;

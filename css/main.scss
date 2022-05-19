@@ -26,6 +26,14 @@ $secondary: #5117EE;
   font-style: normal;
 }
 
+@function tint($color, $percentage) {
+  @return mix(#FFFFFF, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(#000000, $color, $percentage);
+}
+
 body {
   padding: 5em 0 10em 0;
   font-family: "Inter", sans-serif;
@@ -38,6 +46,10 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a {
   margin: 0;
+}
+
+a {
+  transition: 0.2s;
 }
 
 div.container {
@@ -72,6 +84,9 @@ div.container {
     font-weight: 500;
     a {
       color: $primary;
+      &:hover {
+        color: tint($primary, 50);
+      }
     }
   }
   nav {
@@ -84,7 +99,6 @@ div.container {
       font-weight: 500;
       color: $heading;
       text-decoration: none;
-      background: $accent;
       border-radius: 2.5em;
       span {
         color: $secondary;
@@ -93,7 +107,16 @@ div.container {
         margin-right: 1em;
         border: 1px solid $accent;
         background: $background;
-        box-shadow: 0 4px 12px rgb(115,113,113,.05);
+        box-shadow: 0 .5em 1em rgb(115,113,113,.05);
+        &:hover {
+          box-shadow: 0 -.5em 1em rgb(115,113,113,.05);
+        }
+      }
+      &:last-child {
+        background: $accent;
+        &:hover {
+          background: shade($accent, 5);
+        }
       }
     }
   }
@@ -109,6 +132,24 @@ div.container {
       color: $heading;
       text-decoration: none;
       border-bottom: 1px solid $accent;
+      &:hover {
+        color: $secondary;
+      }
+      &.medium:hover {
+        color: #00AB6C;
+      }
+      &.twitter:hover {
+        color: #1DA1F2;
+      }
+      &.instagram:hover {
+        color: #C13584;
+      }
+      &.dribbble:hover {
+        color: #EA4C89;
+      }
+      &.apple:hover {
+        color: #FA57C1;
+      }
     }
   }
   button {
