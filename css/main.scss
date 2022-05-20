@@ -1,9 +1,8 @@
 $background: #FFFFFF;
 $accent: #F5F5F5;
-$heading: #111111;
-$copy: #C5C2C2;
-$primary: #FBE30D;
-$secondary: #5117EE;
+$primary: #111111;
+$secondary: #C5C2C2;
+$brand: #5117EE;
 
 @font-face {
   font-family: 'Inter';
@@ -53,7 +52,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
-  color: $heading;
+  color: $primary;
   background: $background;
   @include device(mobile){
     padding: 3em 0;
@@ -77,28 +76,53 @@ div.container {
   margin-bottom: 5em;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   @include device(mobile){
     margin-bottom: 3em;
   }
-  img {
-    margin-right: 1em;
-    height: 3.5em;
-    @include device(mobile){
-      margin-right: .6em;
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 1em;
+      height: 3.5em;
+      @include device(mobile){
+        margin-right: .6em;
+        height: 2.5em;
+      }
+    }
+    h1, p {
+      font-size: 1.2em;
+      @include device(mobile){
+        font-size: 1em;
+      }
+    }
+    h1 {
+      font-weight: 600;
+    }
+    p {
+      color: $secondary;
+    }
+  }
+  .download {
+    a {
+      padding: 0 1em;
       height: 2.5em;
+      display: inline-block;
+      line-height: 2.5em;
+      font-size: 1.5em;
+      font-weight: 500;
+      color: $primary;
+      text-decoration: none;
+      background: $accent;
+      border-radius: 2.5em;
+      @include device(mobile){
+          font-size: 1em;
+      }
+      &:hover {
+        background: shade($accent, 5);
+      }
     }
-  }
-  h1, p {
-    font-size: 1.2em;
-    @include device(mobile){
-      font-size: 1em;
-    }
-  }
-  h1 {
-    font-weight: 600;
-  }
-  p {
-    color: $copy;
   }
 }
 
@@ -116,9 +140,9 @@ div.container {
       font-size: 2em;
     }
     a {
-      color: $primary;
+      color: $brand;
       &:hover {
-        color: tint($primary, 50);
+        color: tint($brand, 50);
       }
     }
   }
@@ -130,14 +154,14 @@ div.container {
       line-height: 2.5em;
       font-size: 1.5em;
       font-weight: 500;
-      color: $heading;
+      color: $primary;
       text-decoration: none;
       border-radius: 2.5em;
       @include device(mobile){
           font-size: 1em;
       }
       span {
-        color: $secondary;
+        color: $brand;
       }
       &:first-child {
         margin-right: 1em;
@@ -172,11 +196,11 @@ div.container {
     }
     a {
       font-weight: 600;
-      color: $heading;
+      color: $primary;
       text-decoration: none;
       border-bottom: 1px solid $accent;
       &:hover {
-        color: $secondary;
+        color: $brand;
       }
       &.medium:hover {
         color: #00AB6C;
@@ -201,7 +225,7 @@ div.container {
     display: inline-block;
     line-height: 2.5em;
     font-size: 1.5em;
-    color: $heading;
+    color: $primary;
     text-decoration: none;
     position: relative;
     border: none;

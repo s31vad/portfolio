@@ -48,35 +48,60 @@ div.container {
   margin-bottom: 5em;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 481px) {
   #header {
     margin-bottom: 3em;
   }
 }
-#header img {
+#header .logo {
+  display: flex;
+  align-items: center;
+}
+#header .logo img {
   margin-right: 1em;
   height: 3.5em;
 }
 @media only screen and (max-width: 481px) {
-  #header img {
+  #header .logo img {
     margin-right: 0.6em;
     height: 2.5em;
   }
 }
-#header h1, #header p {
+#header .logo h1, #header .logo p {
   font-size: 1.2em;
 }
 @media only screen and (max-width: 481px) {
-  #header h1, #header p {
+  #header .logo h1, #header .logo p {
     font-size: 1em;
   }
 }
-#header h1 {
+#header .logo h1 {
   font-weight: 600;
 }
-#header p {
+#header .logo p {
   color: #C5C2C2;
+}
+#header .download a {
+  padding: 0 1em;
+  height: 2.5em;
+  display: inline-block;
+  line-height: 2.5em;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: none;
+  background: #F5F5F5;
+  border-radius: 2.5em;
+}
+@media only screen and (max-width: 481px) {
+  #header .download a {
+    font-size: 1em;
+  }
+}
+#header .download a:hover {
+  background: #e9e9e9;
 }
 
 #hero {
@@ -99,10 +124,10 @@ div.container {
   }
 }
 #hero h1 a {
-  color: #FBE30D;
+  color: #5117EE;
 }
 #hero h1 a:hover {
-  color: #fdf186;
+  color: #a88bf7;
 }
 #hero nav a {
   padding: 0 1em;
