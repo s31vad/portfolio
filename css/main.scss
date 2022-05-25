@@ -78,7 +78,7 @@ div.container {
   align-items: center;
   justify-content: space-between;
   @include device(mobile){
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
   .logo {
     display: flex;
@@ -105,6 +105,9 @@ div.container {
     }
   }
   .download {
+    @include device(mobile){
+      display: none;
+    }
     a {
       padding: 0 1em;
       height: 2.5em;

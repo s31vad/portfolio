@@ -52,7 +52,7 @@ div.container {
 }
 @media only screen and (max-width: 481px) {
   #header {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
 }
 #header .logo {
@@ -82,6 +82,11 @@ div.container {
 }
 #header .logo p {
   color: #C5C2C2;
+}
+@media only screen and (max-width: 481px) {
+  #header .download {
+    display: none;
+  }
 }
 #header .download a {
   padding: 0 1em;
