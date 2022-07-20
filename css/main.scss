@@ -46,10 +46,29 @@ $brand: #5117EE;
   }
 }
 
+@mixin button {
+  @include device(mobile){
+    font-size: 1em;
+  }
+  padding: 0 1em;
+  height: 2.5em;
+  display: inline-block;
+  line-height: 2.5em;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: $primary;
+  text-decoration: none;
+  background: $accent;
+  border-radius: 2.5em;
+  &:hover {
+    background: shade($accent, 5);
+  }
+}
+
 body {
   padding: 5em 0 10em 0;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   color: $primary;
@@ -109,34 +128,19 @@ div.container {
       display: none;
     }
     a {
-      padding: 0 1em;
-      height: 2.5em;
-      display: inline-block;
-      line-height: 2.5em;
-      font-size: 1.5em;
-      font-weight: 500;
-      color: $primary;
-      text-decoration: none;
-      background: $accent;
-      border-radius: 2.5em;
-      @include device(mobile){
-          font-size: 1em;
-      }
-      &:hover {
-        background: shade($accent, 5);
-      }
+      @include button;
     }
   }
 }
 
 #hero {
-  margin-bottom: 10em;
+  margin-bottom: 8em;
   @include device(mobile){
     margin-bottom: 3em;
   }
   h1 {
-    margin-bottom: 2em;
-    font-size: 4em;
+    margin-bottom: 1.5em;
+    font-size: 4.5em;
     font-weight: 500;
     @include device(mobile){
       margin-bottom: 1em;
@@ -151,37 +155,11 @@ div.container {
   }
   nav {
     a {
-      padding: 0 1em;
-      height: 2.5em;
-      display: inline-block;
-      line-height: 2.5em;
-      font-size: 1.5em;
-      font-weight: 500;
-      color: $primary;
-      text-decoration: none;
-      border-radius: 2.5em;
-      @include device(mobile){
-          font-size: 1em;
-      }
-      span {
-        color: $brand;
-      }
+      @include button;
       &:first-child {
         margin-right: 1em;
-        border: 1px solid $accent;
-        background: $background;
-        box-shadow: 0 .5em 1em rgb(115,113,113,.05);
         @include device(mobile){
           margin-bottom: 1em;
-        }
-        &:hover {
-          box-shadow: 0 -.5em 1em rgb(115,113,113,.05);
-        }
-      }
-      &:last-child {
-        background: $accent;
-        &:hover {
-          background: shade($accent, 5);
         }
       }
     }
@@ -190,9 +168,12 @@ div.container {
 
 #story {
   p {
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
     line-height: 1.5em;
-    font-size: 2em;
+    font-size: 2.5em;
+    &.hide {
+      display: none;
+    }
     @include device(mobile){
       margin-bottom: 1.5em;
       font-size: 1.2em;
