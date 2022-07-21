@@ -98,10 +98,14 @@ div.container {
   justify-content: space-between;
   @include device(mobile){
     margin-bottom: 2em;
+    display: block;
   }
   .logo {
     display: flex;
     align-items: center;
+    @include device(mobile){
+      width: 100%;
+    }
     img {
       margin-right: 1em;
       height: 3.5em;
@@ -155,12 +159,19 @@ div.container {
   }
   nav {
     a {
+      @include device(mobile){
+        margin-right: .5em;
+        margin-bottom: .5em;
+      }
       @include button;
       &:first-child {
-        margin-right: 1em;
+        margin-right: .5em;
+      }
+      &.mobile {
         @include device(mobile){
-          margin-bottom: 1em;
+          display: inline-block;
         }
+        display: none;
       }
     }
   }

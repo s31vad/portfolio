@@ -53,11 +53,17 @@ div.container {
 @media only screen and (max-width: 481px) {
   #header {
     margin-bottom: 2em;
+    display: block;
   }
 }
 #header .logo {
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 481px) {
+  #header .logo {
+    width: 100%;
+  }
 }
 #header .logo img {
   margin-right: 1em;
@@ -148,6 +154,12 @@ div.container {
 }
 @media only screen and (max-width: 481px) {
   #hero nav a {
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+@media only screen and (max-width: 481px) {
+  #hero nav a {
     font-size: 1em;
   }
 }
@@ -155,11 +167,14 @@ div.container {
   background: #e9e9e9;
 }
 #hero nav a:first-child {
-  margin-right: 1em;
+  margin-right: 0.5em;
+}
+#hero nav a.mobile {
+  display: none;
 }
 @media only screen and (max-width: 481px) {
-  #hero nav a:first-child {
-    margin-bottom: 1em;
+  #hero nav a.mobile {
+    display: inline-block;
   }
 }
 
